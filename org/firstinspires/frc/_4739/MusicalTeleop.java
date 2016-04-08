@@ -16,6 +16,14 @@ public class Teleop extends MatchPhaseRoutine {
 	}
 
 	public void tick() {
-		//TODO
+		Hardware.TankDrive.left(JoyConfig.Joy1.getLeftYAxis() * DRIVE_SPEED_MULTIPLIER);
+		Hardware.TankDrive.right(JoyConfig.Joy1.getRightYAxis() * DRIVE_SPEED_MULTIPLIER);
+		if(JoyConfig.Joy1.getRightYAxis() > 0.1 || JoyConfig.Joy1.getRightYAxis() < -0.1){
+			Hardware.FrontArm.drive(1);
+		}else if(JoyConfig.Joy1.getLeftYAxis() > 0.1 || JoyConfig.Joy1.getLeftYAxis() < -0.1){
+			Hardware.FrontArm.drive(1);
+		}else{
+			Hardware.FrontArm.drive(0);
+		}
 	}
 }
