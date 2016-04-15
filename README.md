@@ -1,4 +1,2 @@
-# EZ-WPILibJ
-Whoever FIRST got to do WPILib, I hope they weren't doing it for money.
-
-Please note that, as the framework is unfinished, this demo does not represent the 'final product'.
+# FRC 4739's off-season off-comp code
+Private use.
