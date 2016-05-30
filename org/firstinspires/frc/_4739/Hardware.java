@@ -20,7 +20,8 @@ public class Hardware {
 		talons[RioPortConfig.leftDriveB] = new Talon(RioPortConfig.leftDriveB);
 		talons[RioPortConfig.rightDriveA] = new Talon(RioPortConfig.rightDriveA);
 		talons[RioPortConfig.rightDriveB] = new Talon(RioPortConfig.rightDriveB);
-		victors[RioPortConfig.frontArm] = new Victor(RioPortConfig.frontArm);
+		victors[RioPortConfig.winchA] = new Victor(RioPortConfig.winchA);
+		victors[RioPortConfig.winchB] = new Victor(RioPortConfig.winchB);
 	}
 
 	public static final class TankDrive {
@@ -34,9 +35,10 @@ public class Hardware {
 		}
 	}
 
-	public static final class FrontArm {
+	public static final class Forklift {
 		public static final void drive(double d) {
-			victors[RioPortConfig.frontArm].set(d);
+			victors[RioPortConfig.winchA].set(-d);
+			victors[RioPortConfig.winchB].set(d);
 		}
 	}
 }
