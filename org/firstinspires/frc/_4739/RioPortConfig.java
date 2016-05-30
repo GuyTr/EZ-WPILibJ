@@ -6,5 +6,6 @@ public class RioPortConfig {
 	public static final int rightDriveA = 2;
 	public static final int rightDriveB = 3;
 
-	public static final int frontArm = 4;
+	public static final int winchA = 4;
+	public static final int winchB = 5;
 }
